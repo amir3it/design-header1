@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 95vh;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 95vh;
+}
+
+.left {
+    grid-column: 1/4;
+    background-image: url(img/dark\ company.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.right {
+    background-color: #222121;
+    grid-column: 4/7;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.wellcome{
+    animation: image ease-out 1s;
+    font-family: 'Dancing Script', cursive;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    color: white;
+}
+
+.text{
+    animation: image ease-out 1.2s;
+    font-family: 'Dancing Script', cursive;
+    grid-column: 3/5;
+    grid-row: 3/4;
+    color: white;
+}
+
+.btn{
+    animation: image ease-out 1.3s;
+    font-family: sans-serif;
+    font-size: large;
+    grid-column: 3/4;
+    grid-row: 4/5;
+    align-self: center;
+    padding: 8px;
+    background-color: rgb(42, 42, 255);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.btn:hover{
+    color: rgb(42, 42, 255);
+    background-color: #ffff;
+}
+
+.title{
+    position: absolute;
+    font-weight: bolder;
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 40%;
+    right: 43%;
+    text-align: center;
+    background: linear-gradient(to right, #202020 54%, #cac8c8 46%) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes image {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 100;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .title {
+        display: none;
+    }
+}
